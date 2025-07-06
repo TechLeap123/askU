@@ -509,6 +509,7 @@ transform: scale(1.15);
 
 /*** Footer ***/
 .footer {
+    position: relative;
     margin-top: 6rem;
     padding-top: 9rem;
     background:
@@ -524,15 +525,12 @@ transform: scale(1.15);
 }
 
 .footer .btn.btn-social {
-    margin-right: 5px;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--light);
-    border: 1px solid rgba(256, 256, 256, .1);
-    border-radius: 40px;
     transition: .3s;
 }
 
@@ -573,6 +571,10 @@ transform: scale(1.15);
     color: var(--light);
 }
 
+.fa-instagram{
+    text-decoration: none;
+}
+
 .footer .footer-menu a {
     margin-right: 15px;
     padding-right: 15px;
@@ -584,6 +586,23 @@ transform: scale(1.15);
     padding-right: 0;
     border-right: none;
 }
+
+.footer-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  margin-right: 150px;
+  z-index: 10;
+}
+
+.footer-img {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 
 
  .container {
@@ -627,9 +646,9 @@ transform: scale(1.15);
 }
 
 .card-list .card-item .user-image {
-  width: 250px;
+  width: 235px;
   height: 250px;
-  border-radius: 50%;
+  border-radius: 48%;
   margin-bottom: 40px;
   border: 3px solid rgb(255, 255, 255);
   padding: 4px;
@@ -670,5 +689,26 @@ transform: scale(1.15);
 
   .slider-wrapper .swiper-slide-button {
     display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .logo-normal,
+  .logo-sticky {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-logo {
+    position: static;
+    margin: 30px auto 0;
+    display: block;
+    text-align: center;
+  }
+
+  .footer-img {
+    margin: 0 auto;
+    display: block;
   }
 }
